@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - MSdocs-laravel-mysql-BCS
+name: Build and deploy PHP app to Azure Web App - msdocs-laravel-mysql-BCS
 
 on:
   push:
@@ -61,15 +61,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_948A4DCB84B24D27A14D4D8053F20B5F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8821FAEE6A35429D8438339D62E785B2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B885BF8723F443138DD25BD2AEAE3B89 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3587F89BB3CA4DBE8CA1CAC7862E5B84 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1773D45DF34F4A3A94388415D4190D37 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_74AC8C422A1A4ADEB692FFDEE257EBBC }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'MSdocs-laravel-mysql-BCS'
+          app-name: 'msdocs-laravel-mysql-BCS'
           slot-name: 'Production'
           package: .
           
